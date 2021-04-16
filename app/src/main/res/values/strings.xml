@@ -5,5 +5,7 @@
     <string name="commandlvl">Trainers Command</string>
     <string name="champions">Trainer of Champions</string>
     <string name="bonus">Bonus XP:</string>
+    <string name="pokemon_xp">Pokemon XP:</string>
+    <string name="actual_level">Pokemon Level:</string>
 
 </resources>

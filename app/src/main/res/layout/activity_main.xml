@@ -32,7 +32,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/bottomdex"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="fitEnd"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -84,11 +84,46 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
         android:layout_height="2dp"
+        android:id="@+id/separador1"
         app:layout_constraintTop_toBottomOf="@id/totalbonus"
         android:background="@color/white"
         android:layout_margin="5dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:id="@+id/actualxpin"
+        android:layout_height="wrap_content"
+        android:text="@string/pokemon_xp"
+        app:layout_constraintTop_toBottomOf="@id/separador1"
+        app:layout_constraintLeft_toLeftOf="@id/bonusxp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:paddingTop="5dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="40dp"
+        android:id="@+id/actualxp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="@id/totalbonus"
+        app:layout_constraintTop_toBottomOf="@id/separador1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/actualxp"
+        app:layout_constraintLeft_toLeftOf="@id/actualxpin"
+        android:text="@string/actual_level"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"/>
+
+
+
 
 
 
