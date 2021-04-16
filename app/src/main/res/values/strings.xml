@@ -2,5 +2,8 @@
     <string name="app_name">PokemonTabletop XP</string>
     <string name="command">Command Level</string>
     <string name="champion">Trainer of Champions</string>
+    <string name="commandlvl">Trainers Command</string>
+    <string name="champions">Trainer of Champions</string>
+    <string name="bonus">Bonus XP:</string>
 
 </resources>
