@@ -12,6 +12,18 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
+
+        var pokemonxp = 17
+        val pokemonlv = when {
+               pokemonxp <= 10 -> 1
+               pokemonxp <= 20 -> 2
+               pokemonxp <= 30 -> 3
+            else -> 4
+        }
+
+        println(pokemonlv)
+
+
         assertEquals(4, 2 + 2)
     }
 }

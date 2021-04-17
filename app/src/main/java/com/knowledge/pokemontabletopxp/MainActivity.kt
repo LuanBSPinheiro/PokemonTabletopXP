@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
             // Apply the adapter to the spinner
             spinner.adapter = adapter
         }
+
+        val lv = GetPokemonLevel.getLv(15)
     }
 
 
