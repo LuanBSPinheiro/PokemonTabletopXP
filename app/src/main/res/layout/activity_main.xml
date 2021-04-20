@@ -187,6 +187,7 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/pkmnFinalLv"
         android:text="1"
         android:textColor="@color/white"
         android:textSize="@dimen/tsize"
@@ -207,16 +208,18 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/pkmnFinalXp"
         android:text="1"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="@id/actualxp"
         app:layout_constraintTop_toTopOf="@id/final_xp" />
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttomcalc"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="100dp"
+        android:background="@drawable/button"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toTopOf="@id/bottomdex"
         app:layout_constraintLeft_toLeftOf="parent"
