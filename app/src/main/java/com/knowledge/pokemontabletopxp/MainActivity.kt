@@ -68,20 +68,36 @@ class MainActivity : AppCompatActivity() {
         }
 
         pokemonXpView.doAfterTextChanged {
-            val pkmnXp = it.toString().toInt()
-            lvl = GetPokemonLevel.getLv(pkmnXp)
+            val inputXp = it.toString()
+            val valueInputXp = if (inputXp.isNotEmpty()) {
+                inputXp.toInt()
+            } else {
+                0
+            }
+            lvl = GetPokemonLevel.getLv(valueInputXp)
             pokemonLevelView.text = lvl.toString()
+            pkmnFinalXpView.text = valueInputXp.toString()
+            pkmnFinalLvView.text = GetPokemonLevel.getLv(valueInputXp).toString()
         }
 
         trainingNumberView.doAfterTextChanged {
-            training = it.toString().toInt()
+            training = if (it.toString().isNotEmpty()) {
+                it.toString().toInt()
+            } else {
+                0
+            }
         }
 
         buttonCalcView.setOnClickListener {
-            totalFinalXp =
-                (getCalc(totalBonusValue, lvl, training) + pokemonXpView.text.toString().toInt())
-            pkmnFinalXpView.text = totalFinalXp.toString()
-            pkmnFinalLvView.text = GetPokemonLevel.getLv(totalFinalXp).toString()
+            try {
+                totalFinalXp =
+                    (getCalc(totalBonusValue, lvl, training) + pokemonXpView.text.toString().toInt())
+                pkmnFinalXpView.text = totalFinalXp.toString()
+                pkmnFinalLvView.text = GetPokemonLevel.getLv(totalFinalXp).toString()
+            } catch (e: Exception) {
+                Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
+            }
+
         }
 
     }
